@@ -29,9 +29,6 @@ import warnings
 warnings.filterwarnings('ignore')
 
 
-# Directory to save logs and trained model
-MODEL_DIR = os.path.join(ROOT_DIR, "logs")
-
 # Local path to trained weights file
 COCO_MODEL_PATH = os.path.join(ROOT_DIR, "mask_rcnn_coco.h5")
 # Download COCO trained weights from Releases if needed
@@ -73,6 +70,9 @@ class CustomConfig(Config):
     VALIDATION_STEPS = 5
 
     DETECTION_MIN_CONFIDENCE = 0.9
+
+    # Directory to save logs and trained model
+    MODEL_DIR = "logs"
 
 
 
